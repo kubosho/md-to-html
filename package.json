@@ -9,7 +9,7 @@
     "lint": "tslint --config tslint.json --project tsconfig.json",
     "format": "prettier --config .prettierrc.js --write src/**/*.{ts,tsx}",
     "check_format": "prettier --config .prettierrc.js --write src/**/*.{ts,tsx} && git diff --exit-code",
-    "clean": "rimraf dist/*.*"
+    "clean": "rimraf dist/"
   },
   "repository": {
     "type": "git",
