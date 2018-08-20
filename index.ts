@@ -1,6 +1,5 @@
 import globby from 'globby';
 import { resolve as resolvePath } from 'path';
-import { expectMdFilePath } from './lib/path/expect-file-path';
 import { defineArguments } from './lib/define-arguments';
 import { defaultAction } from './lib/default-action';
 import { optionToAction } from './lib/option-to-action';
@@ -33,14 +32,12 @@ Promise.resolve()
 
     if (!!argv.to) {
       paths.forEach((path: string) => {
-        expectMdFilePath(path);
         optionToAction(path, { to: argv.to });
       });
       return;
     }
 
     paths.forEach((path: string) => {
-      expectMdFilePath(path);
       defaultAction(path);
     });
   })
