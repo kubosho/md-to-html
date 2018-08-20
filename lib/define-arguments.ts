@@ -1,7 +1,12 @@
 import yargs from 'yargs';
 import { version } from './version';
 
-export function defineArguments(): yargs.Arguments {
+export interface MdToHtmlArguments extends yargs.Arguments {
+  version?: string;
+  to?: string;
+}
+
+export function defineArguments(): MdToHtmlArguments {
   return (
     yargs
       .version(version)
