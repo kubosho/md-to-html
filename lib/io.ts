@@ -39,7 +39,7 @@ export function readStdin(): Promise<string> {
 
       do {
         chunk = unwrapOrFromNullable(stdin.read(), '').toString();
-        contents += stdin.read();
+        contents += chunk;
       } while (chunk !== '');
     });
 
