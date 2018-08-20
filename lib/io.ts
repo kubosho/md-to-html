@@ -11,7 +11,7 @@ export function readFile(path: string): Promise<string> {
   return r(path, FILE_ENCODING);
 }
 
-export function writeFile(path: string, contents: string) {
+export function writeFile(path: string, contents: string): Promise<void> {
   const w = promisify(writeFileMod);
   return w(path, contents, FILE_ENCODING);
 }
