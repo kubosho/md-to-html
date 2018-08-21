@@ -2,7 +2,7 @@
   "name": "md-to-html",
   "version": "1.0.0",
   "description": "",
-  "main": "bin/md-to-html.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "test": "ava",
