@@ -13,7 +13,6 @@ test.cb('Read from stdin', t => {
       }
 
       const fixtureHtml = resolvePath('__tests__/fixtures/fixture_stdin.html');
-      const fixtureMd = resolvePath('__tests__/fixtures/fixture_stdin.md');
 
       Promise.all([stdout, readFile(fixtureHtml)])
         .then(([actual, expected]) => {
@@ -21,9 +20,9 @@ test.cb('Read from stdin', t => {
           t.end();
         })
         .catch(t.end);
-
-      createReadStream(fixtureMd)
-        .pipe(process.stdin);
     },
   );
+
+  const fixtureMd = resolvePath('__tests__/fixtures/fixture_stdin.md');
+  createReadStream(fixtureMd).pipe(process.stdin);
 });
