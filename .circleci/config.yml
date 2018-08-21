@@ -29,6 +29,9 @@ jobs:
                 name: Check formatted sources
                 command: npm run check_format
             - run:
+                name: Builing scripts
+                command: npm run build
+            - run:
                 name: Run unit testing
                 command: npm test
 
