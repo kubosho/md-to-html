@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "test": "ava",
-    "lint": "tslint --config tslint.json --project tsconfig.json",
+    "lint": "tslint --config tslint.json --project tsconfig.json --exclude package.json",
     "format": "prettier --config .prettierrc.js --write src/**/*.{ts,tsx}",
     "check_format": "prettier --config .prettierrc.js --write src/**/*.{ts,tsx} && git diff --exit-code",
     "clean": "rimraf dist/"
