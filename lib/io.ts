@@ -1,8 +1,5 @@
 import { unwrapOrFromNullable } from 'option-t/lib/Nullable/unwrapOr';
-import {
-  readFile as readFileMod,
-  writeFile as writeFileMod,
-} from 'fs';
+import { readFile as readFileMod, writeFile as writeFileMod } from 'fs';
 import { promisify } from 'util';
 
 const FILE_ENCODING = 'utf8';
@@ -20,10 +17,7 @@ export function writeFile(path: string, contents: string): Promise<void> {
 export function readStdin(): Promise<string> {
   let contents = '';
 
-  return new Promise((
-    resolve: (value: string) => void,
-    reject: (errorMessage: string) => void,
-  ) => {
+  return new Promise((resolve: (value: string) => void, reject: (errorMessage: string) => void) => {
     const stdin = process.stdin;
     const isTTY = stdin.isTTY;
 

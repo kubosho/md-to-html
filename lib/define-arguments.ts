@@ -7,13 +7,8 @@ export interface MdToHtmlArguments extends yargs.Arguments {
 }
 
 export function defineArguments(): MdToHtmlArguments {
-  return (
-    yargs
-      .version(version)
-      .option('to', {
-        type: 'string',
-        desc: 'Output HTML file in specified path',
-      })
-      .argv
-  );
+  return yargs.version(version).option('to', {
+    type: 'string',
+    desc: 'Output HTML file in specified path',
+  }).argv;
 }
