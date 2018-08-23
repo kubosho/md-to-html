@@ -64,7 +64,7 @@ async function writeHtmlString(content: string, outputPath?: string) {
 export async function main() {
   const argv = defineArguments();
   const input = unwrapOrFromMaybe(argv._, []);
-  const outputPath = argv.to;
+  const outputPath = argv.output;
 
   const paths = await getAbsolutePaths(input);
   let content = '';
