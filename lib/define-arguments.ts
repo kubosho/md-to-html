@@ -3,7 +3,7 @@ import { version } from './version';
 
 export interface MdToHtmlArguments extends yargs.Arguments {
   version?: string;
-  to?: string;
+  output?: string;
 }
 
 export function defineArguments(): MdToHtmlArguments {
