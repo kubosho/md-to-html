@@ -11,6 +11,7 @@ import {
   writeFile,
   readStdin,
 } from './lib/io';
+import { extractFileName } from './lib/extract-file-name';
 import { convertToHtml } from './lib/markdown-to-html-converter';
 import { reportFatalError } from './lib/report-fatal-error';
 
@@ -19,6 +20,7 @@ type FilePath = string;
 
 const DEFAULT_FILE_NAME = 'output.html';
 const FROM_STDIN = 'stdin';
+const HTML_EXTENSION = '.html';
 
 async function readFileContent(path?: string): Promise<string> {
   if (!path || path.length === 0) {
@@ -86,11 +88,11 @@ export async function main() {
         return;
       }
 
-      const filename = basename(path) === FROM_STDIN ? DEFAULT_FILE_NAME : basename(path);
+      const filename = extractFileName(path) === FROM_STDIN ? DEFAULT_FILE_NAME : extractFileName(path);
 
       if (outOption !== '' || outDirOption !== '') {
-        const o = outOption || joinPath(outDirOption, filename);
-        writeHtmlString(htmlString, o);
+        const outPath = joinPath(outDirOption, outOption || `${filename}${HTML_EXTENSION}`);
+        writeHtmlString(htmlString, outPath);
         return;
       }
 
