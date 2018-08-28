@@ -91,7 +91,8 @@ export async function main() {
       const filename = extractFileName(path) === FROM_STDIN ? DEFAULT_FILE_NAME : extractFileName(path);
 
       if (outOption !== '' || outDirOption !== '') {
-        const outPath = joinPath(outDirOption, outOption || `${filename}${HTML_EXTENSION}`);
+        const outFile = outOption || `${filename}${HTML_EXTENSION}`;
+        const outPath = joinPath(outDirOption, outFile);
         writeHtmlString(htmlString, outPath);
         return;
       }
