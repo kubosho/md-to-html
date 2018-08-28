@@ -1,5 +1,7 @@
 # md-to-html
 
+[![CircleCI](https://circleci.com/gh/kubosho/md-to-html.svg?style=svg)](https://circleci.com/gh/kubosho/md-to-html)
+
 CLI tool to convert Markdown to HTML.
 
 ## Installation
