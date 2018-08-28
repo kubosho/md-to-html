@@ -1,0 +1,12 @@
+# directories
+__tests__/
+lib/
+
+# files
+./*.ts
+./**/*.ts
+ts*.json
+yarn.lock
+
+## hidden files
+\.*
