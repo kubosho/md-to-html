@@ -1,6 +1,6 @@
 # md-to-html
 
-CLI tool to convert Markdown (footnote supported) to HTML.
+CLI tool to convert Markdown to HTML.
 
 ## Installation
 
@@ -24,6 +24,10 @@ md-to-html foo.md --to path/to/foo.html
 
 ## Options
 
-### `--to <filepath>`
+### `--out <filepath>`, `-o <filepath>`
 
-Output HTML file in specified path.
+Output HTML file to specified path.
+
+### `--outDir <filepath>`
+
+Output HTML file to specified directory.
