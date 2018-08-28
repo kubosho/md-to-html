@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "CLI tool to convert Markdown to HTML",
   "main": "dist/index.js",
+  "bin": {
+    "md-to-html": "./bin/md-to-html"
+  },
   "scripts": {
     "build": "tsc",
     "test": "ava",
