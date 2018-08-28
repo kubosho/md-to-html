@@ -1,5 +1,5 @@
 {
-  "name": "md-to-html",
+  "name": "@kubosho_/md-to-html",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
