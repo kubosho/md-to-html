@@ -19,7 +19,13 @@ md-to-html foo.md
 Output HTML to file:
 
 ```
-md-to-html foo.md --to path/to/foo.html
+md-to-html foo.md --out path/to/foo.html
+```
+
+Output HTML to directory:
+
+```
+md-to-html foo.md --outDir path/to
 ```
 
 ## Options
