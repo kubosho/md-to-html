@@ -3,8 +3,8 @@ __tests__/
 lib/
 
 # files
-./*.ts
-./**/*.ts
+*.ts
+**/*.ts
 ts*.json
 yarn.lock
 
