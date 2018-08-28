@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.0.3
+
+### Bug fix
+
+- Fixed output file is not converted extention from `.md` to `.html` with `--outDir` option. ([#7](https://github.com/kubosho/md-to-html/issues/7))
+    - I published old binary file...
+
 ## v1.0.2
 
 ### Bug fix
