@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.4
+
+### Bug fix
+
+- Deleted needless dependency package ([#10](https://github.com/kubosho/md-to-html/issues/10))
+
 ## v1.0.3
 
 ### Bug fix
