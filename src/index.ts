@@ -5,15 +5,15 @@ import {
   resolve as resolvePath,
 } from 'path';
 import { unwrapOrFromMaybe } from 'option-t/lib/Maybe/unwrapOr';
-import { defineArguments } from './src/define-arguments';
+import { defineArguments } from './define-arguments';
 import {
   readFile,
   writeFile,
   readStdin,
-} from './src/io';
-import { extractFileName } from './src/extract-file-name';
-import { convertToHtml } from './src/markdown-to-html-converter';
-import { reportFatalError } from './src/report-fatal-error';
+} from './io';
+import { extractFileName } from './extract-file-name';
+import { convertToHtml } from './markdown-to-html-converter';
+import { reportFatalError } from './report-fatal-error';
 
 type HtmlString = string;
 type FilePath = string;
