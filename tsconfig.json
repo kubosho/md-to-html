@@ -1,18 +1,15 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
+    "outDir": "./bin/lib",
     "noImplicitAny": true,
     "sourceMap": false,
     "module": "commonjs",
-    "resolveJsonModule": true,
     "esModuleInterop": true,
     "target": "esnext",
-    "jsx": "preserve",
-    "allowJs": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "index.ts",
     "src/**/*"
   ],
   "exclude": [

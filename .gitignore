@@ -1,5 +1,5 @@
 .tmp/
-dist/
+bin/lib/
 node_modules/
 
 *.log

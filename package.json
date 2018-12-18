@@ -7,12 +7,12 @@
     "md-to-html": "./bin/md-to-html.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && cpx 'bin/lib/src/*.js' bin/lib/ && rimraf bin/lib/src",
     "test": "ava",
     "lint": "tslint --config tslint.json --project tsconfig.json --exclude package.json",
     "format": "prettier --config .prettierrc.js --write lib/**/*.{ts,tsx}",
     "check_format": "prettier --config .prettierrc.js --write lib/**/*.{ts,tsx} && git diff --exit-code",
-    "clean": "rimraf dist/"
+    "clean": "rimraf bin/lib"
   },
   "repository": {
     "type": "git",
