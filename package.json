@@ -4,7 +4,7 @@
   "description": "CLI tool to convert Markdown to HTML",
   "main": "dist/index.js",
   "bin": {
-    "md-to-html": "./bin/md-to-html"
+    "md-to-html": "./bin/md-to-html.js"
   },
   "scripts": {
     "build": "tsc",
