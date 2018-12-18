@@ -1,16 +1,8 @@
 import globby from 'globby';
-import {
-  basename,
-  join as joinPath,
-  resolve as resolvePath,
-} from 'path';
+import { basename, join as joinPath, resolve as resolvePath } from 'path';
 import { unwrapOrFromMaybe } from 'option-t/lib/Maybe/unwrapOr';
 import { defineArguments } from './define-arguments';
-import {
-  readFile,
-  writeFile,
-  readStdin,
-} from './io';
+import { readFile, writeFile, readStdin } from './io';
 import { extractFileName } from './extract-file-name';
 import { convertToHtml } from './markdown-to-html-converter';
 import { reportFatalError } from './report-fatal-error';
@@ -71,15 +63,17 @@ export async function main() {
       reportFatalError('Input Error: You must pass a valid list of files to parse');
     }
 
-    await Promise.all(paths.map(async (path: string) => {
-      try {
-        const c = await readFileContent(path);
-        const h = convertToHtml(c);
-        htmlStringMap.set(path, h);
-      } catch (err) {
-        reportFatalError(err);
-      }
-    }));
+    await Promise.all(
+      paths.map(async (path: string) => {
+        try {
+          const c = await readFileContent(path);
+          const h = convertToHtml(c);
+          htmlStringMap.set(path, h);
+        } catch (err) {
+          reportFatalError(err);
+        }
+      }),
+    );
   }
 
   htmlStringMap.forEach((htmlString: HtmlString, path: FilePath) => {
@@ -88,7 +82,8 @@ export async function main() {
         return;
       }
 
-      const filename = extractFileName(path) === FROM_STDIN ? DEFAULT_FILE_NAME : extractFileName(path);
+      const filename =
+        extractFileName(path) === FROM_STDIN ? DEFAULT_FILE_NAME : extractFileName(path);
 
       if (outOption !== '' || outDirOption !== '') {
         const outFile = outOption || `${filename}${HTML_EXTENSION}`;
