@@ -2341,9 +2341,9 @@ onetime@^2.0.0:
   dependencies:
     mimic-fn "^1.0.0"
 
-option-t@^18.0.0:
-  version "18.0.0"
-  resolved "https://registry.yarnpkg.com/option-t/-/option-t-18.0.0.tgz#593c196e2d0e5d6b3b3845818315fb4f5f161f70"
+option-t@^21.0.2:
+  version "21.0.2"
+  resolved "https://registry.yarnpkg.com/option-t/-/option-t-21.0.2.tgz#34e1f90ebb3e359de524a67742ac4f2a64553f13"
 
 ora@^2.1.0:
   version "2.1.0"
