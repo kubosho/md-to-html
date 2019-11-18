@@ -45,7 +45,7 @@
   "dependencies": {
     "globby": "^8.0.1",
     "option-t": "^18.0.0",
-    "showdown": "^1.8.6",
+    "showdown": "^1.9.1",
     "yargs": "^12.0.1"
   },
   "ava": {
