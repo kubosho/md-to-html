@@ -11,6 +11,7 @@
     "test": "ava",
     "lint": "tslint --config tslint.json --project tsconfig.json --exclude package.json",
     "format": "prettier --config .prettierrc.js --write src/**/*.{ts,tsx}",
+    "can-npm-publish": "can-npm-publish",
     "check_format": "prettier --config .prettierrc.js --write src/**/*.{ts,tsx} && git diff --exit-code",
     "clean": "rimraf bin/lib"
   },
