@@ -1,5 +1,5 @@
 {
-  "name": "@kubosho_/md-to-html",
+  "name": "@kubosho/md-to-html",
   "version": "1.0.4",
   "description": "CLI tool to convert Markdown to HTML",
   "main": "dist/index.js",
@@ -11,6 +11,7 @@
     "test": "ava",
     "lint": "tslint --config tslint.json --project tsconfig.json --exclude package.json",
     "format": "prettier --config .prettierrc.js --write src/**/*.{ts,tsx}",
+    "can-npm-publish": "can-npm-publish",
     "check_format": "prettier --config .prettierrc.js --write src/**/*.{ts,tsx} && git diff --exit-code",
     "clean": "rimraf bin/lib"
   },
@@ -35,6 +36,7 @@
     "@types/showdown": "1.7.5",
     "@types/yargs": "^11.1.1",
     "ava": "2.4.0",
+    "can-npm-publish": "^1.3.2",
     "cpx": "^1.5.0",
     "prettier": "1.19.1",
     "rimraf": "3.0.0",
