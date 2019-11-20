@@ -3,37 +3,37 @@ version: 2
 jobs:
     prepare:
         docker:
-            - image: circleci/node:10.8.0-stretch-browsers
+            - image: circleci/node:13.1.0-stretch-browsers
 
         steps:
             - checkout
             - run:
-                name: Install dependencies
-                command: yarn
+                  name: Install dependencies
+                  command: yarn
             - persist_to_workspace:
-                root: .
-                paths:
-                    - "./*"
+                  root: .
+                  paths:
+                      - './*'
 
     test:
         docker:
-            - image: circleci/node:10.8.0-stretch-browsers
+            - image: circleci/node:13.1.0-stretch-browsers
 
         steps:
             - attach_workspace:
-                at: .
+                  at: .
             - run:
-                name: Lint scripts
-                command: npm run lint
+                  name: Lint scripts
+                  command: npm run lint
             - run:
-                name: Check formatted sources
-                command: npm run check_format
+                  name: Check formatted sources
+                  command: npm run check_format
             - run:
-                name: Builing scripts
-                command: npm run build
+                  name: Builing scripts
+                  command: npm run build
             - run:
-                name: Run unit testing
-                command: npm test
+                  name: Run unit testing
+                  command: npm test
 
 workflows:
     version: 2
@@ -41,5 +41,5 @@ workflows:
         jobs:
             - prepare
             - test:
-                requires:
-                    - prepare
+                  requires:
+                      - prepare
