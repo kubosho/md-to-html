@@ -35,11 +35,35 @@ jobs:
                   name: Run unit testing
                   command: npm test
 
+    publish:
+        docker:
+            - image: circleci/node:13.1.0-stretch-browsers
+
+        steps:
+            - attach_workspace:
+                  at: .
+            - run:
+                  name: Create npmrc file
+                  command: touch ~/.npmrc
+            - run:
+                  name: Write token to npmrc file
+                  command: echo "//registry.npmjs.org/:_authtoken=${NPMJS_PUBLISH_TOKEN}" >> ~/.npmrc
+            - run:
+                  name: Can package publish to npm?
+                  command: npm run can-npm-publish
+            - run:
+                  name: Publish to npm
+                  command: npm publish echo "//registry.npmjs.org/:_authtoken=${NPMJS_PUBLISH_TOKEN}" >> ~/.npmrc
+
 workflows:
     version: 2
-    test:
+    flows:
         jobs:
             - prepare
             - test:
                   requires:
                       - prepare
+            - publish:
+                  filters:
+                      branches:
+                          only: master
