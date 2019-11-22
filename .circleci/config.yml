@@ -53,7 +53,7 @@ jobs:
                   command: npm run can-npm-publish
             - run:
                   name: Publish to npm
-                  command: npm publish echo "//registry.npmjs.org/:_authtoken=${NPMJS_PUBLISH_TOKEN}" >> ~/.npmrc
+                  command: npm publish
 
 workflows:
     version: 2
