@@ -30,6 +30,26 @@ jobs:
                   paths:
                       - './*'
 
+    lint:
+        docker:
+            - image: circleci/node:13.1.0-stretch-browsers
+        steps:
+            - attach_workspace:
+                  at: .
+            - run:
+                  name: Lint scripts
+                  command: npm run lint
+
+    check_format:
+        docker:
+            - image: circleci/node:13.1.0-stretch-browsers
+        steps:
+            - attach_workspace:
+                  at: .
+            - run:
+                  name: Check formatted sources
+                  command: npm run check_format
+
     test:
         docker:
             - image: circleci/node:13.1.0-stretch-browsers
@@ -37,12 +57,6 @@ jobs:
         steps:
             - attach_workspace:
                   at: .
-            - run:
-                  name: Lint scripts
-                  command: npm run lint
-            - run:
-                  name: Check formatted sources
-                  command: npm run check_format
             - run:
                   name: Run unit testing
                   command: npm test
@@ -75,9 +89,15 @@ workflows:
             - build:
                   requires:
                       - prepare
-            - test:
+            - check_format:
                   requires:
                       - prepare
+            - lint:
+                  requires:
+                      - prepare
+            - test:
+                  requires:
+                      - build
             - publish:
                   requires:
                       - test
