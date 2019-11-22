@@ -1,10 +1,10 @@
 # directories
 __tests__/
+example/
 lib/
+src/
 
 # files
-*.ts
-**/*.ts
 ts*.json
 yarn.lock
 
