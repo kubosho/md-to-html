@@ -85,7 +85,7 @@ jobs:
             - run:
                   name: Write token to npmrc file
                   command: |
-                      echo "//registry.npmjs.org/:_authtoken=${NPMJS_PUBLISH_TOKEN}" >> ~/.npmrc
+                      echo "//registry.npmjs.org/:_authToken=${NPMJS_PUBLISH_TOKEN}" >> ~/.npmrc
                       npm whoami
             - run:
                   name: Publish to npm
