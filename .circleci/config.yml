@@ -84,7 +84,9 @@ jobs:
                   command: touch ~/.npmrc
             - run:
                   name: Write token to npmrc file
-                  command: echo "//registry.npmjs.org/:_authtoken=${NPMJS_PUBLISH_TOKEN}" >> ~/.npmrc
+                  command: |
+                      echo "//registry.npmjs.org/:_authtoken=${NPMJS_PUBLISH_TOKEN}" >> ~/.npmrc
+                      npm whoami
             - run:
                   name: Publish to npm
                   command: npm publish
