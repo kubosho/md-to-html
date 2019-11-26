@@ -102,6 +102,9 @@ workflows:
             - can_publish:
                   requires:
                       - prepare
+                  filters:
+                      branches:
+                          only: master
             - check_format:
                   requires:
                       - prepare
