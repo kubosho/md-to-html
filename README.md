@@ -6,10 +6,8 @@ CLI tool to convert Markdown to HTML.
 
 ## Installation
 
-In npm username is `kubosho_`, not `kubosho`. My user name is very confusing sorry.
-
 ```
-npm install -g @kubosho_/md-to-html
+npm install -g @kubosho/md-to-html
 ```
 
 ## Usage

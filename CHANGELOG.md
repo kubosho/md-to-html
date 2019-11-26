@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.0.0
+
+### Breaking changes
+
+- Rename this package name ( `@kubosho_/md-to-html` -> `@kubosho/md-to-html` )
+
 ## v1.0.4
 
 ### Bug fix
@@ -11,7 +17,6 @@
 ### Bug fix
 
 - Fixed output file is not converted extention from `.md` to `.html` with `--outDir` option. ([#7](https://github.com/kubosho/md-to-html/issues/7))
-    - I published old binary file...
 
 ## v1.0.2
 
