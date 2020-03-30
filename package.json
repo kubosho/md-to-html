@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "globby": "^8.0.1",
-    "option-t": "^21.0.2",
+    "option-t": "^22.2.4",
     "showdown": "^1.9.1",
     "yargs": "^12.0.1"
   },

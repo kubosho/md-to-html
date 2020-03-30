@@ -3037,10 +3037,10 @@ onetime@^5.1.0:
   dependencies:
     mimic-fn "^2.1.0"
 
-option-t@^21.0.2:
-  version "21.0.2"
-  resolved "https://registry.yarnpkg.com/option-t/-/option-t-21.0.2.tgz#34e1f90ebb3e359de524a67742ac4f2a64553f13"
-  integrity sha512-ZQsaLFh05I6xQjbXVBHL7WjXXRznAqt1/CJ5knUkOMov8P366CwekTYNIzmPGBksK4voMIyzJGCBHWMi2GnL+A==
+option-t@^22.2.4:
+  version "22.2.4"
+  resolved "https://registry.yarnpkg.com/option-t/-/option-t-22.2.4.tgz#2656bfb141e52e6a14309a093f90766e2f603069"
+  integrity sha512-sx26gyu6dkMTQXScZwMavgAlojoA2HCbMq4E31iNHfT62YC2mu0InVEqae9ufy75IscS3ixpHY+1OP7/6xBtOw==
 
 ora@^3.4.0:
   version "3.4.0"
