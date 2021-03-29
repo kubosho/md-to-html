@@ -45,7 +45,7 @@
     "typescript": "3.0.1"
   },
   "dependencies": {
-    "globby": "^8.0.1",
+    "globby": "^11.0.3",
     "option-t": "^21.0.2",
     "showdown": "^1.9.1",
     "yargs": "^12.0.1"
