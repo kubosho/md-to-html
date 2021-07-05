@@ -32,7 +32,7 @@
   "homepage": "https://github.com/kubosho/md-to-html#readme",
   "devDependencies": {
     "@types/globby": "^8.0.0",
-    "@types/node": "10.5.6",
+    "@types/node": "16.0.0",
     "@types/showdown": "1.7.5",
     "@types/yargs": "^11.1.1",
     "ava": "2.4.0",
